@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SimpleCrudExWeb", "SimpleCrudExWeb\", "{9C44CFE2-08B7-428F-8EF3-B24BF195886E}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7"
+		ProjectReferences = "{68cb979a-9cfa-43cd-85ee-477eae8890a4}|School.Business.dll;{C53EBF9D-EBF4-4968-8EAB-BE31F9E31431}|School.DataAccess.dll;{8517D404-207B-48BC-AF71-3912B33E42EE}|School.Entities.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_60441"
+		Debug.AspNetCompiler.PhysicalPath = "SimpleCrudExWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60441\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_60441"
+		Release.AspNetCompiler.PhysicalPath = "SimpleCrudExWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60441\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60441"
+		SlnRelativePath = "SimpleCrudExWeb\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Entities", "School.Entities\School.Entities.csproj", "{8517D404-207B-48BC-AF71-3912B33E42EE}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "School.Database", "School.Database\School.Database.sqlproj", "{0608DF05-0F28-4A0A-97A9-D90262D4B192}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.DataAccess", "School.DataAccess\School.DataAccess.csproj", "{C53EBF9D-EBF4-4968-8EAB-BE31F9E31431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Business", "School.Business\School.Business.csproj", "{68CB979A-9CFA-43CD-85EE-477EAE8890A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C44CFE2-08B7-428F-8EF3-B24BF195886E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C44CFE2-08B7-428F-8EF3-B24BF195886E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C44CFE2-08B7-428F-8EF3-B24BF195886E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C44CFE2-08B7-428F-8EF3-B24BF195886E}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8517D404-207B-48BC-AF71-3912B33E42EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8517D404-207B-48BC-AF71-3912B33E42EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8517D404-207B-48BC-AF71-3912B33E42EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8517D404-207B-48BC-AF71-3912B33E42EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0608DF05-0F28-4A0A-97A9-D90262D4B192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0608DF05-0F28-4A0A-97A9-D90262D4B192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0608DF05-0F28-4A0A-97A9-D90262D4B192}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0608DF05-0F28-4A0A-97A9-D90262D4B192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0608DF05-0F28-4A0A-97A9-D90262D4B192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0608DF05-0F28-4A0A-97A9-D90262D4B192}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C53EBF9D-EBF4-4968-8EAB-BE31F9E31431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C53EBF9D-EBF4-4968-8EAB-BE31F9E31431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C53EBF9D-EBF4-4968-8EAB-BE31F9E31431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C53EBF9D-EBF4-4968-8EAB-BE31F9E31431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68CB979A-9CFA-43CD-85EE-477EAE8890A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68CB979A-9CFA-43CD-85EE-477EAE8890A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68CB979A-9CFA-43CD-85EE-477EAE8890A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68CB979A-9CFA-43CD-85EE-477EAE8890A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46A5C197-400F-4D84-A52E-41B369F5D437}
+	EndGlobalSection
+EndGlobal
