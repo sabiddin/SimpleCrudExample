@@ -47,7 +47,8 @@ public partial class Pages_Student : System.Web.UI.Page
 
     protected void btnSave_Click(object sender, EventArgs e)
     {
-        Save();
+        if(Page.IsValid)
+            Save();
        
 
     }

@@ -16,7 +16,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div>           
             <div id="divSuccess" runat="server" class="alert alert-success" visible="false">
                                 <strong>Success!</strong> <asp:Label Text="" ID="lblSuccessMessage" runat="server" />
                             </div>
@@ -28,7 +28,10 @@
                 <td style="width: 40%">
                     <div class="panel panel-primary">
                         <div class="panel-heading">Student Details</div>
-                        <div class="panel-body">                            
+                        <div class="panel-body">   
+                             <div>
+                <asp:ValidationSummary ID="vsStudent" DisplayMode="BulletList" CssClass="alert-danger text-left" runat="server" />
+            </div>
                             <table class="table table-hover">
                                 <tr>
                                     <td>
@@ -42,6 +45,14 @@
                                         <asp:Label Text="First Name" runat="server" /></td>
                                     <td>
                                         <asp:TextBox runat="server" CssClass="form-control" ID="txtStudentFirstName" />
+                                        <asp:RequiredFieldValidator CssClass="alert-danger" ID="rfvFirstName" 
+                                            ErrorMessage="Pleae provide the first name." 
+                                            Text="First name is Required"
+                                            ControlToValidate="txtStudentFirstName" runat="server" />
+                                        <asp:RegularExpressionValidator ErrorMessage="First name must be all letters, cannot contain numbers or special charcters" Text="Firs name is invalid"
+                                            ValidationExpression="^[a-zA-Z\s]+$"
+                                            CssClass="alert-danger"
+                                            ControlToValidate="txtStudentFirstName" runat="server" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -56,6 +67,59 @@
                                         <asp:Label Text="Last Name" runat="server" /></td>
                                     <td>
                                         <asp:TextBox runat="server" CssClass="form-control" ID="txtStudentLastName" />
+                                        <asp:RequiredFieldValidator ID="rfvLastName" 
+                                            ErrorMessage="Please provide the last name" 
+                                            Text="Last name is required"
+                                            CssClass="alert-danger" ControlToValidate="txtStudentLastName" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label Text="Username" runat="server" /></td>
+                                    <td>
+                                        <asp:TextBox runat="server" CssClass="form-control" ID="txtUsername" />
+                                        <asp:RequiredFieldValidator ID="rfvUsername" 
+                                            ErrorMessage="Please provide the Username" 
+                                            Text="Username is required"
+                                            CssClass="alert-danger" ControlToValidate="txtUsername" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label Text="Password" runat="server" /></td>
+                                    <td>
+                                        <asp:TextBox runat="server" CssClass="form-control" ID="txtPassword" TextMode="Password" />
+                                        <asp:RequiredFieldValidator ID="rfvPassword" 
+                                            ErrorMessage="Please provide the Password" 
+                                            Text="Password is required"
+                                            CssClass="alert-danger" ControlToValidate="txtPassword" runat="server" />
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td>
+                                        <asp:Label Text="Confirm Password" runat="server" /></td>
+                                    <td>
+                                        <asp:TextBox runat="server" CssClass="form-control" ID="txtConfirmPassword" TextMode="Password" />
+                                        <asp:RequiredFieldValidator ID="rfvConfirmPassword" 
+                                            ErrorMessage="Please provide the Password" 
+                                            Text="Passwords is required"
+                                            CssClass="alert-danger" ControlToValidate="txtConfirmPassword" runat="server" />
+                                        <asp:CompareValidator CssClass="alert-danger" ErrorMessage="Please enter the same passwords" ControlToValidate="txtConfirmPassword" ControlToCompare="txtPassword" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label Text="Age" runat="server" /></td>
+                                    <td>
+                                        <asp:TextBox runat="server" CssClass="form-control" ID="txtAge"/>
+                                        <asp:RangeValidator ErrorMessage="Must be older than 18 and younger than 100" 
+                                            ControlToValidate="txtAge" Type="Integer"
+                                            MinimumValue ="18"
+                                            MaximumValue ="100"
+                                            CssClass="alert-danger"
+                                            runat="server" />
+
+                                        <asp:CompareValidator CssClass="alert-danger" ErrorMessage="Please enter the same passwords" ControlToValidate="txtConfirmPassword" ControlToCompare="txtPassword" runat="server" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -64,11 +128,16 @@
                                     </td>
                                     <td>
                                         <asp:DropDownList runat="server" CssClass="form-control" ID="ddlDepartments">
+                                            <asp:ListItem Text="" Value="0" />
                                             <asp:ListItem Text="Computer Science" Value="4" />
                                             <asp:ListItem Text="English" Value="1" />
                                             <asp:ListItem Text="Mathematics" Value="2" />
                                             <asp:ListItem Text="Physics" Value="3" />
                                         </asp:DropDownList>
+                                        <asp:RequiredFieldValidator ID="rfvDepartments" InitialValue="0" 
+                                            ErrorMessage="Please choose a department"
+                                            Text="Deparment is required"
+                                            CssClass="alert-danger" ControlToValidate="ddlDepartments" runat="server" />
                                     </td>
                                 </tr>
                                 <tr>
