@@ -124,8 +124,11 @@
                                     </div>
                                 </EditItemTemplate>
                                 <FooterTemplate>
-                                    </table>      
-                    <asp:Button Text="Add" CssClass="btn btn-primary" ID="btnAdd" OnClick="btnAdd_Click" runat="server" />
+                                    </table>  
+                                    <div class="btn btn-primary">
+                    <asp:Button CssClass="btn btn-primary" Text="Add" ID="btnAdd" OnClick="btnAdd_Click" runat="server" />
+                                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                                        </div>
                                 </FooterTemplate>
                             </asp:DataList>
                             <div class="container container-fluid" id="divAdd" runat="server" visible="false">
@@ -161,7 +164,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-2 text-left">
-                                        <asp:Button Text="Save" ID="btnSave" OnClick="btnSave_Click" CssClass="btn btn-default" runat="server" />
+                                        <asp:Button Text="Save" ID="btnSave" OnClick="btnSave_Click" CssClass="btn btn-default" runat="server" />                                        
                                         <asp:Button Text="Cancel" ID="btnCancel" OnClick="btnCancel_Click" CssClass="btn btn-warning" runat="server" />
                                     </div>
                                 </div>
